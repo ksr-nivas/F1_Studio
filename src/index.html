@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="f1StudioApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/">
+    <title>F1 Studio</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="pd-20 panel-heading">
+        <button type="button" class="btn btn-sm btn-primary">
+        <i class="fa fa-address-card-o" aria-hidden="true"></i> Boards
+        </button>
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    
+    <div ng-view></div>
+
+     <!-- include Angular -->
+     <!--<script src="dist/js/angular.min.js"></script>
+     <script src="dist/js/jquery.min.js"></script>
+     <script src="dist/js/bootstrap.min.js"></script>-->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <!-- include bootstrap -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+
+    <!-- include application specific js -->
+    <script src="js/studioApp.js"></script>
+</body>
+</html>

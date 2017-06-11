@@ -1,0 +1,57 @@
+<div class="panel panel-default" ng-controller="f1StudioController as f1Ctrl">
+  <div class="panel-heading">
+    <h3 class="panel-title">Welcome Board</h3>
+  </div>
+  <div class="panel-body col-md-12">
+    <div class="col-md-3 pd-5 bg-grey" style="border: 1px solid #ccc;">
+        <label>Basics</label>
+
+        <div class="list-group">
+            <a href="" class="list-group-item" ng-repeat="listItem in f1Ctrl.listData" style="margin-top: 10px;"
+                ng-mouseenter="vm.mouseOver=true;" ng-mouseleave="vm.mouseOver=false;">
+                <h5 class="list-group-item-heading">{{listItem.id}}</h5>
+                <div style="display: flex">
+                    <i class="fa fa-comment-o" aria-hidden="true" ng-if="$index===1"></i>
+                    <!--<p class="list-group-item-text pdl-10">{{listItem.name}}</p>-->
+                    <editable-div item="listItem" editable="f1Ctrl.editable"></editable-div>
+                    <i class="fa fa-edit" style="font-size:18px; margin-left: 60%;" aria-hidden="true" ng-if="vm.mouseOver"
+                        ng-click="f1Ctrl.onItemClick()"></i>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+    <div class="col-md-3 pd-5 bg-grey" style="border: 1px solid #ccc; margin-left: 10px;">
+        <label>Intermediate</label>
+
+        <div class="list-group">
+            <a href="" class="list-group-item" ng-repeat="listItem in f1Ctrl.listData" style="margin-top: 10px;"
+                ng-mouseenter="vm.mouseOver=true;" ng-mouseleave="vm.mouseOver=false;">
+                <h5 class="list-group-item-heading">{{listItem.id}}</h5>
+                <div style="display: flex">
+                    <i class="fa fa-comment-o" aria-hidden="true" ng-if="$index===1"></i>
+                    <p class="list-group-item-text pdl-10">{{listItem.name}}</p>
+                    <i class="fa fa-edit" style="font-size:18px; margin-left: 60%;" aria-hidden="true" ng-if="vm.mouseOver"></i>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <div class="col-md-3 pd-5 bg-grey" style="border: 1px solid #ccc; margin-left: 10px;">
+        <label>Advanced</label>
+
+        <div class="list-group">
+            <a href="" class="list-group-item" ng-repeat="listItem in f1Ctrl.listData" style="margin-top: 10px;"
+                ng-mouseenter="vm.mouseOver=true;" ng-mouseleave="vm.mouseOver=false;">
+                <h5 class="list-group-item-heading">{{listItem.id}}</h5>
+                <div style="display: flex">
+                    <i class="fa fa-comment-o" aria-hidden="true" ng-if="$index===1"></i>
+                    <p class="list-group-item-text pdl-10">{{listItem.name}}</p>
+                    <i class="fa fa-edit" style="font-size:18px; margin-left: 60%;" aria-hidden="true" ng-if="vm.mouseOver"></i>
+                </div>
+            </a>
+        </div>
+
+    </div>
+  </div>
+</div>
